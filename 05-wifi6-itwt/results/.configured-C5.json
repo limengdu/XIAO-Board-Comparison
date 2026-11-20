@@ -1,0 +1,1 @@
+{"target": "esp32c5", "revision": 100, "cpu_mhz": 240, "xtal_mhz": 48, "idf": "v6.1.1", "mac": "d0:cf:13:e2:22:68", "wifi6": true, "band5": true, "ssid": "citric_2.4G", "ssid5": "citric_5G", "pass_set": true, "host": "192.168.1.103", "plan": "2g/ps,2g/twt500,2g/twt2000,2g/twt2000w8,5g/ps,5g/twt500,5g/twt2000,5g/twt2000w8", "secs": 60, "autorun": 1}

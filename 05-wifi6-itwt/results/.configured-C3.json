@@ -1,0 +1,1 @@
+{"target": "esp32c3", "revision": 4, "cpu_mhz": 160, "xtal_mhz": 40, "idf": "v6.1.1", "mac": "a0:85:e3:0d:d6:e0", "wifi6": false, "band5": false, "ssid": "citric_2.4G", "ssid5": "citric_5G", "pass_set": true, "host": "192.168.1.103", "plan": "2g/ps", "secs": 60, "autorun": 1}

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="510" viewBox="0 0 1000 510" font-family="Helvetica, Arial, sans-serif" font-size="13">
+<rect width="1000" height="510" fill="#ffffff"/>
+<text x="10" y="26" font-size="15" font-weight="bold">Mean current while connected and idle (same network task, lower is better)</text>
+<text x="10" y="74"><tspan font-weight="bold">C5</tspan> 2.4 GHz DTIM power save</text>
+<rect x="330" y="60" width="307.0" height="20" fill="#98a2b3"/>
+<text x="643.0" y="75">21.67 mA</text>
+<text x="10" y="100"><tspan font-weight="bold">C5</tspan> 2.4 GHz TWT 500 ms</text>
+<rect x="330" y="86" width="319.2" height="20" fill="#1f6fb2"/>
+<text x="655.2" y="101">22.54 mA</text>
+<text x="10" y="126"><tspan font-weight="bold">C5</tspan> 2.4 GHz TWT 2003 ms</text>
+<rect x="330" y="112" width="85.6" height="20" fill="#1f6fb2"/>
+<text x="421.6" y="127">6.04 mA</text>
+<text x="10" y="152"><tspan font-weight="bold">C5</tspan> 2.4 GHz TWT 2003 ms, wake 8 ms</text>
+<rect x="330" y="138" width="19.3" height="20" fill="#1f6fb2"/>
+<text x="355.3" y="153">1.36 mA</text>
+<text x="10" y="178"><tspan font-weight="bold">C5</tspan> 5 GHz DTIM power save</text>
+<rect x="330" y="164" width="168.7" height="20" fill="#98a2b3"/>
+<text x="504.7" y="179">11.91 mA</text>
+<text x="10" y="204"><tspan font-weight="bold">C5</tspan> 5 GHz TWT 500 ms</text>
+<rect x="330" y="190" width="403.5" height="20" fill="#1f6fb2"/>
+<text x="739.5" y="205">28.48 mA</text>
+<text x="10" y="230"><tspan font-weight="bold">C5</tspan> 5 GHz TWT 2003 ms</text>
+<rect x="330" y="216" width="107.2" height="20" fill="#1f6fb2"/>
+<text x="443.2" y="231">7.57 mA</text>
+<text x="10" y="256"><tspan font-weight="bold">C5</tspan> 5 GHz TWT 2003 ms, wake 8 ms</text>
+<rect x="330" y="242" width="21.2" height="20" fill="#1f6fb2"/>
+<text x="357.2" y="257">1.49 mA</text>
+<text x="10" y="296"><tspan font-weight="bold">C6</tspan> 2.4 GHz DTIM power save</text>
+<rect x="330" y="282" width="317.6" height="20" fill="#98a2b3"/>
+<text x="653.6" y="297">22.42 mA</text>
+<text x="10" y="322"><tspan font-weight="bold">C6</tspan> 2.4 GHz TWT 500 ms</text>
+<rect x="330" y="308" width="312.8" height="20" fill="#1f6fb2"/>
+<text x="648.8" y="323">22.08 mA</text>
+<text x="10" y="348"><tspan font-weight="bold">C6</tspan> 2.4 GHz TWT 2003 ms</text>
+<rect x="330" y="334" width="83.6" height="20" fill="#1f6fb2"/>
+<text x="419.6" y="349">5.90 mA</text>
+<text x="10" y="374"><tspan font-weight="bold">C6</tspan> 2.4 GHz TWT 2003 ms, wake 8 ms</text>
+<rect x="330" y="360" width="21.5" height="20" fill="#1f6fb2"/>
+<text x="357.5" y="375">1.52 mA</text>
+<text x="10" y="414"><tspan font-weight="bold">S3</tspan> 2.4 GHz DTIM power save</text>
+<rect x="330" y="400" width="560.0" height="20" fill="#98a2b3"/>
+<text x="896.0" y="415">39.53 mA</text>
+<text x="10" y="454"><tspan font-weight="bold">C3</tspan> 2.4 GHz DTIM power save</text>
+<rect x="330" y="440" width="349.7" height="20" fill="#98a2b3"/>
+<text x="685.7" y="455">24.68 mA</text>
+</svg>

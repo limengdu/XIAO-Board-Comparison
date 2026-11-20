@@ -1,0 +1,269 @@
+{
+ "label": "C5",
+ "note": "",
+ "dry_run": true,
+ "recorded_at": "2026-11-20T15:53:20",
+ "info": {
+  "target": "esp32c5",
+  "revision": 100,
+  "cpu_mhz": 240,
+  "xtal_mhz": 48,
+  "idf": "v6.1.1",
+  "mac": "d0:cf:13:e2:22:68",
+  "wifi6": true,
+  "band5": true,
+  "host": "192.168.1.103",
+  "plan": "2g/ps,2g/twt500,2g/twt2000,2g/twt2000w8,5g/ps,5g/twt500,5g/twt2000,5g/twt2000w8",
+  "secs": 15,
+  "autorun": 0
+ },
+ "config": {
+  "plan": "2g/ps,2g/twt500,2g/twt2000,2g/twt2000w8,5g/ps,5g/twt500,5g/twt2000,5g/twt2000w8",
+  "secs": 15,
+  "supply_mv": null,
+  "report_every_s": 10,
+  "ping_gap_s": [
+   3.0,
+   7.0
+  ]
+ },
+ "phases": [
+  {
+   "idx": 0,
+   "band": "2g",
+   "mode": "ps",
+   "ok": true,
+   "twt": null,
+   "ip": "192.168.1.20",
+   "channel": 10,
+   "rssi": -23,
+   "phy": "HE20",
+   "pings_answered_by_board": 3,
+   "reports": 1,
+   "connected_at_end": true,
+   "duration_s": 14.999569500039797,
+   "pings_sent": 3,
+   "pings_lost": 0,
+   "rtt_ms": {
+    "median": 92.63362502679229,
+    "p90": 92.63362502679229,
+    "max": 94.82091601239517
+   }
+  },
+  {
+   "idx": 1,
+   "band": "2g",
+   "mode": "twt500",
+   "ok": true,
+   "twt": {
+    "ok": true,
+    "api_err": "ESP_OK",
+    "status": 1,
+    "reason": 0,
+    "wake_invl_us": 499712,
+    "wake_dura_us": 65280,
+    "trigger": 1,
+    "announced": true,
+    "flow_id": 0
+   },
+   "ip": "192.168.1.20",
+   "channel": 10,
+   "rssi": -22,
+   "phy": "HE20",
+   "pings_answered_by_board": 4,
+   "reports": 1,
+   "connected_at_end": true,
+   "duration_s": 15.005726750008762,
+   "pings_sent": 4,
+   "pings_lost": 0,
+   "rtt_ms": {
+    "median": 94.86216647201218,
+    "p90": 180.34179095411673,
+    "max": 447.34183297259733
+   }
+  },
+  {
+   "idx": 2,
+   "band": "2g",
+   "mode": "twt2000",
+   "ok": true,
+   "twt": {
+    "ok": true,
+    "api_err": "ESP_OK",
+    "status": 1,
+    "reason": 0,
+    "wake_invl_us": 2002944,
+    "wake_dura_us": 65280,
+    "trigger": 1,
+    "announced": true,
+    "flow_id": 0
+   },
+   "ip": "192.168.1.20",
+   "channel": 10,
+   "rssi": -23,
+   "phy": "HE20",
+   "pings_answered_by_board": 2,
+   "reports": 1,
+   "connected_at_end": true,
+   "duration_s": 14.058018084033392,
+   "pings_sent": 2,
+   "pings_lost": 0,
+   "rtt_ms": {
+    "median": 991.0736669844482,
+    "p90": 512.7487920108251,
+    "max": 1469.3985419580713
+   }
+  },
+  {
+   "idx": 3,
+   "band": "2g",
+   "mode": "twt2000w8",
+   "ok": true,
+   "twt": {
+    "ok": true,
+    "api_err": "ESP_OK",
+    "status": 1,
+    "reason": 0,
+    "wake_invl_us": 2002944,
+    "wake_dura_us": 8192,
+    "trigger": 1,
+    "announced": true,
+    "flow_id": 0
+   },
+   "ip": "192.168.1.20",
+   "channel": 10,
+   "rssi": -22,
+   "phy": "HE20",
+   "pings_answered_by_board": 3,
+   "reports": 1,
+   "connected_at_end": true,
+   "duration_s": 14.066843834007159,
+   "pings_sent": 3,
+   "pings_lost": 0,
+   "rtt_ms": {
+    "median": 7116.004042036366,
+    "p90": 7116.004042036366,
+    "max": 11740.325499966275
+   }
+  },
+  {
+   "idx": 4,
+   "band": "5g",
+   "mode": "ps",
+   "ok": true,
+   "twt": null,
+   "ip": "192.168.1.20",
+   "channel": 60,
+   "rssi": -25,
+   "phy": "HE20",
+   "pings_answered_by_board": 4,
+   "reports": 1,
+   "connected_at_end": true,
+   "duration_s": 15.000873040989973,
+   "pings_sent": 4,
+   "pings_lost": 0,
+   "rtt_ms": {
+    "median": 74.05008349451236,
+    "p90": 84.75820801686496,
+    "max": 144.1047500120476
+   }
+  },
+  {
+   "idx": 5,
+   "band": "5g",
+   "mode": "twt500",
+   "ok": true,
+   "twt": {
+    "ok": true,
+    "api_err": "ESP_OK",
+    "status": 1,
+    "reason": 0,
+    "wake_invl_us": 499712,
+    "wake_dura_us": 65280,
+    "trigger": 1,
+    "announced": true,
+    "flow_id": 0
+   },
+   "ip": "192.168.1.20",
+   "channel": 60,
+   "rssi": -25,
+   "phy": "HE20",
+   "pings_answered_by_board": 4,
+   "reports": 1,
+   "connected_at_end": true,
+   "duration_s": 15.003658999979962,
+   "pings_sent": 4,
+   "pings_lost": 0,
+   "rtt_ms": {
+    "median": 389.5030000130646,
+    "p90": 450.5980830290355,
+    "max": 774.5735420030542
+   }
+  },
+  {
+   "idx": 6,
+   "band": "5g",
+   "mode": "twt2000",
+   "ok": true,
+   "twt": {
+    "ok": true,
+    "api_err": "ESP_OK",
+    "status": 1,
+    "reason": 0,
+    "wake_invl_us": 2002944,
+    "wake_dura_us": 65280,
+    "trigger": 1,
+    "announced": true,
+    "flow_id": 0
+   },
+   "ip": "192.168.1.20",
+   "channel": 60,
+   "rssi": -25,
+   "phy": "HE20",
+   "pings_answered_by_board": 3,
+   "reports": 1,
+   "connected_at_end": true,
+   "duration_s": 14.05400479095988,
+   "pings_sent": 3,
+   "pings_lost": 0,
+   "rtt_ms": {
+    "median": 726.606082986109,
+    "p90": 726.606082986109,
+    "max": 1528.4216669970192
+   }
+  },
+  {
+   "idx": 7,
+   "band": "5g",
+   "mode": "twt2000w8",
+   "ok": true,
+   "twt": {
+    "ok": true,
+    "api_err": "ESP_OK",
+    "status": 1,
+    "reason": 0,
+    "wake_invl_us": 2002944,
+    "wake_dura_us": 8192,
+    "trigger": 1,
+    "announced": true,
+    "flow_id": 0
+   },
+   "ip": "192.168.1.20",
+   "channel": 60,
+   "rssi": -25,
+   "phy": "HE20",
+   "pings_answered_by_board": 3,
+   "reports": 1,
+   "connected_at_end": true,
+   "duration_s": 14.056621458032168,
+   "pings_sent": 3,
+   "pings_lost": 0,
+   "rtt_ms": {
+    "median": 1104.3803750071675,
+    "p90": 1104.3803750071675,
+    "max": 2486.4579170243815
+   }
+  }
+ ],
+ "deep_sleep_ua": null
+}

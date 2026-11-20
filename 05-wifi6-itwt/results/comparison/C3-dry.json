@@ -1,0 +1,55 @@
+{
+ "label": "C3",
+ "note": "",
+ "dry_run": true,
+ "recorded_at": "2026-11-20T18:27:13",
+ "info": {
+  "target": "esp32c3",
+  "revision": 4,
+  "cpu_mhz": 160,
+  "xtal_mhz": 40,
+  "idf": "v6.1.1",
+  "mac": "a0:85:e3:0d:d6:e0",
+  "wifi6": false,
+  "band5": false,
+  "host": "192.168.1.103",
+  "plan": "2g/ps",
+  "secs": 15,
+  "autorun": 0
+ },
+ "config": {
+  "plan": "2g/ps",
+  "secs": 15,
+  "supply_mv": null,
+  "report_every_s": 10,
+  "ping_gap_s": [
+   3.0,
+   7.0
+  ]
+ },
+ "phases": [
+  {
+   "idx": 0,
+   "band": "2g",
+   "mode": "ps",
+   "ok": true,
+   "twt": null,
+   "ip": "192.168.1.181",
+   "channel": 10,
+   "rssi": -18,
+   "phy": "HT20",
+   "pings_answered_by_board": 4,
+   "reports": 1,
+   "connected_at_end": true,
+   "duration_s": 15.098981124989223,
+   "pings_sent": 4,
+   "pings_lost": 0,
+   "rtt_ms": {
+    "median": 87.53020848962478,
+    "p90": 96.61979199154302,
+    "max": 118.0899579776451
+   }
+  }
+ ],
+ "deep_sleep_ua": null
+}

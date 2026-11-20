@@ -1,0 +1,55 @@
+{
+ "label": "S3",
+ "note": "",
+ "dry_run": true,
+ "recorded_at": "2026-11-20T18:04:08",
+ "info": {
+  "target": "esp32s3",
+  "revision": 2,
+  "cpu_mhz": 240,
+  "xtal_mhz": 40,
+  "idf": "v6.1.1",
+  "mac": "30:30:f9:33:f9:a8",
+  "wifi6": false,
+  "band5": false,
+  "host": "192.168.1.103",
+  "plan": "2g/ps",
+  "secs": 10,
+  "autorun": 0
+ },
+ "config": {
+  "plan": "2g/ps",
+  "secs": 10,
+  "supply_mv": null,
+  "report_every_s": 10,
+  "ping_gap_s": [
+   3.0,
+   7.0
+  ]
+ },
+ "phases": [
+  {
+   "idx": 0,
+   "band": "2g",
+   "mode": "ps",
+   "ok": true,
+   "twt": null,
+   "ip": "192.168.1.49",
+   "channel": 10,
+   "rssi": -45,
+   "phy": "HT20",
+   "pings_answered_by_board": 2,
+   "reports": 1,
+   "connected_at_end": true,
+   "duration_s": 10.113165499991737,
+   "pings_sent": 2,
+   "pings_lost": 0,
+   "rtt_ms": {
+    "median": 97.74022898636758,
+    "p90": 80.04266698844731,
+    "max": 115.43779098428786
+   }
+  }
+ ],
+ "deep_sleep_ua": null
+}
