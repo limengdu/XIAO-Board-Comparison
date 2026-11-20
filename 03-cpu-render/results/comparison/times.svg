@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="344" viewBox="0 0 1000 344" font-family="Helvetica, Arial, sans-serif" font-size="13">
+<rect width="1000" height="344" fill="#ffffff"/>
+<text x="170" y="26" font-size="15" font-weight="bold">Time to render the same four images (median, lower is faster)</text>
+<text x="10" y="74" font-weight="bold">C3</text>
+<text x="10" y="91" fill="#444">160 MHz, 1 core</text>
+<rect x="170" y="60" width="709.5" height="18" fill="#1f6fb2"/>
+<line x1="879.5" y1="69.0" x2="879.6" y2="69.0" stroke="#101828"/>
+<text x="885.6" y="73">6.91 s</text>
+<rect x="170" y="80" width="710.0" height="18" fill="#f79009"/>
+<line x1="880.0" y1="89.0" x2="880.0" y2="89.0" stroke="#101828"/>
+<text x="886.0" y="93">6.91 s</text>
+<text x="10" y="130" font-weight="bold">C5</text>
+<text x="10" y="147" fill="#444">240 MHz, 1 core</text>
+<rect x="170" y="116" width="314.0" height="18" fill="#1f6fb2"/>
+<line x1="484.0" y1="125.0" x2="484.1" y2="125.0" stroke="#101828"/>
+<text x="490.1" y="129">3.06 s</text>
+<rect x="170" y="136" width="314.2" height="18" fill="#f79009"/>
+<line x1="484.2" y1="145.0" x2="484.2" y2="145.0" stroke="#101828"/>
+<text x="490.2" y="149">3.06 s</text>
+<text x="10" y="186" font-weight="bold">C6</text>
+<text x="10" y="203" fill="#444">160 MHz, 1 core</text>
+<rect x="170" y="172" width="569.7" height="18" fill="#1f6fb2"/>
+<line x1="739.7" y1="181.0" x2="739.7" y2="181.0" stroke="#101828"/>
+<text x="745.7" y="185">5.55 s</text>
+<rect x="170" y="192" width="570.1" height="18" fill="#f79009"/>
+<line x1="740.1" y1="201.0" x2="740.1" y2="201.0" stroke="#101828"/>
+<text x="746.1" y="205">5.55 s</text>
+<text x="10" y="242" font-weight="bold">S3</text>
+<text x="10" y="259" fill="#444">240 MHz, 2 cores</text>
+<rect x="170" y="228" width="324.8" height="18" fill="#1f6fb2"/>
+<line x1="494.8" y1="237.0" x2="494.9" y2="237.0" stroke="#101828"/>
+<text x="500.9" y="241">3.16 s</text>
+<rect x="170" y="248" width="229.7" height="18" fill="#f79009"/>
+<line x1="399.7" y1="257.0" x2="399.7" y2="257.0" stroke="#101828"/>
+<text x="405.7" y="261">2.24 s</text>
+<rect x="170" y="294" width="12" height="12" fill="#1f6fb2"/>
+<text x="186" y="305">One after another (one task)</text>
+<rect x="430" y="294" width="12" height="12" fill="#f79009"/>
+<text x="446" y="305">Four at once (four tasks)</text>
+</svg>

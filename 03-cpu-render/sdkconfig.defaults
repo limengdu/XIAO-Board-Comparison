@@ -1,0 +1,12 @@
+# Console (REPL) on the XIAO USB-C port
+CONFIG_ESP_CONSOLE_USB_SERIAL_JTAG=y
+CONFIG_BOOTLOADER_LOG_LEVEL_WARN=y
+
+# 1 ms scheduler tick
+CONFIG_FREERTOS_HZ=1000
+
+# Same optimisation level on every chip
+CONFIG_COMPILER_OPTIMIZATION_PERF=y
+
+# Render tasks keep the CPU busy for seconds; the idle-task watchdog stays off during the benchmark
+CONFIG_ESP_TASK_WDT_EN=n

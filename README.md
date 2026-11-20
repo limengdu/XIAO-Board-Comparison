@@ -6,7 +6,7 @@
 | --- | --- | --- | --- |
 | 1. 8 MB PSRAM | [01-psram-recorder](01-psram-recorder/README.md) | 记录器能否回看事故发生前的数据 | 四板实测完成，[对比结果](01-psram-recorder/results/comparison/summary.md) |
 | 2. 8 MB Flash | [02-flash-ota](02-flash-ota/README.md) | 保留 OTA 升级能力后还能放多少内容 | 四板实测完成，[对比结果](02-flash-ota/results/comparison/summary.md) |
-| 3. 240 MHz CPU | `03-cpu-render` | 渲染同一组四张图所需的时间 | 待开发 |
+| 3. 240 MHz CPU | [03-cpu-render](03-cpu-render/README.md) | 渲染同一组四张图所需的时间 | 四板实测完成，[对比结果](03-cpu-render/results/comparison/summary.md) |
 | 4. CAN FD | `04-canfd` | 经典 CAN 与 CAN FD 传输同一数据块 | 待 CAN Pal 收发器到货 |
 | 5. Wi-Fi 6 省电 | `05-wifi6-itwt` | 开启 iTWT 后相同联网任务的耗电与响应 | 待确认 AP 支持 iTWT 与功耗仪 |
 

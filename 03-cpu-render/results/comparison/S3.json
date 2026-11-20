@@ -1,0 +1,365 @@
+{
+  "label": "S3",
+  "port": "/dev/cu.usbmodem2101",
+  "note": "USB powered, desk",
+  "recorded_at": "2026-11-20T11:40:01",
+  "info": {
+    "target": "esp32s3",
+    "revision": 2,
+    "cores": 2,
+    "cpu_mhz": 240,
+    "idf": "v6.1.1",
+    "width": 320,
+    "height": 240,
+    "max_iter": 255,
+    "scenes": [
+      "mandelbrot",
+      "seahorse-valley",
+      "elephant-valley",
+      "julia"
+    ]
+  },
+  "modes": {
+    "seq": [
+      {
+        "ok": true,
+        "mode": "seq",
+        "run": 1,
+        "wall_us": 3161952,
+        "images": [
+          {
+            "scene": "mandelbrot",
+            "us": 596596,
+            "crc32": 1148652194,
+            "iters": 4805711
+          },
+          {
+            "scene": "seahorse-valley",
+            "us": 1251193,
+            "crc32": 3897345883,
+            "iters": 10202087
+          },
+          {
+            "scene": "elephant-valley",
+            "us": 1110892,
+            "crc32": 3039397877,
+            "iters": 9046609
+          },
+          {
+            "scene": "julia",
+            "us": 203141,
+            "crc32": 1642204412,
+            "iters": 2175959
+          }
+        ],
+        "iters": 26230366
+      },
+      {
+        "ok": true,
+        "mode": "seq",
+        "run": 2,
+        "wall_us": 3161848,
+        "images": [
+          {
+            "scene": "mandelbrot",
+            "us": 596574,
+            "crc32": 1148652194,
+            "iters": 4805711
+          },
+          {
+            "scene": "seahorse-valley",
+            "us": 1251188,
+            "crc32": 3897345883,
+            "iters": 10202087
+          },
+          {
+            "scene": "elephant-valley",
+            "us": 1110891,
+            "crc32": 3039397877,
+            "iters": 9046609
+          },
+          {
+            "scene": "julia",
+            "us": 203138,
+            "crc32": 1642204412,
+            "iters": 2175959
+          }
+        ],
+        "iters": 26230366
+      },
+      {
+        "ok": true,
+        "mode": "seq",
+        "run": 3,
+        "wall_us": 3161840,
+        "images": [
+          {
+            "scene": "mandelbrot",
+            "us": 596575,
+            "crc32": 1148652194,
+            "iters": 4805711
+          },
+          {
+            "scene": "seahorse-valley",
+            "us": 1251188,
+            "crc32": 3897345883,
+            "iters": 10202087
+          },
+          {
+            "scene": "elephant-valley",
+            "us": 1110891,
+            "crc32": 3039397877,
+            "iters": 9046609
+          },
+          {
+            "scene": "julia",
+            "us": 203138,
+            "crc32": 1642204412,
+            "iters": 2175959
+          }
+        ],
+        "iters": 26230366
+      },
+      {
+        "ok": true,
+        "mode": "seq",
+        "run": 4,
+        "wall_us": 3161840,
+        "images": [
+          {
+            "scene": "mandelbrot",
+            "us": 596575,
+            "crc32": 1148652194,
+            "iters": 4805711
+          },
+          {
+            "scene": "seahorse-valley",
+            "us": 1251188,
+            "crc32": 3897345883,
+            "iters": 10202087
+          },
+          {
+            "scene": "elephant-valley",
+            "us": 1110891,
+            "crc32": 3039397877,
+            "iters": 9046609
+          },
+          {
+            "scene": "julia",
+            "us": 203138,
+            "crc32": 1642204412,
+            "iters": 2175959
+          }
+        ],
+        "iters": 26230366
+      },
+      {
+        "ok": true,
+        "mode": "seq",
+        "run": 5,
+        "wall_us": 3161840,
+        "images": [
+          {
+            "scene": "mandelbrot",
+            "us": 596575,
+            "crc32": 1148652194,
+            "iters": 4805711
+          },
+          {
+            "scene": "seahorse-valley",
+            "us": 1251188,
+            "crc32": 3897345883,
+            "iters": 10202087
+          },
+          {
+            "scene": "elephant-valley",
+            "us": 1110891,
+            "crc32": 3039397877,
+            "iters": 9046609
+          },
+          {
+            "scene": "julia",
+            "us": 203138,
+            "crc32": 1642204412,
+            "iters": 2175959
+          }
+        ],
+        "iters": 26230366
+      }
+    ],
+    "par": [
+      {
+        "ok": true,
+        "mode": "par",
+        "run": 1,
+        "wall_us": 2236044,
+        "images": [
+          {
+            "scene": "mandelbrot",
+            "us": 1340236,
+            "crc32": 1148652194,
+            "iters": 4805711
+          },
+          {
+            "scene": "seahorse-valley",
+            "us": 2235939,
+            "crc32": 3897345883,
+            "iters": 10202087
+          },
+          {
+            "scene": "elephant-valley",
+            "us": 2121738,
+            "crc32": 3039397877,
+            "iters": 9046609
+          },
+          {
+            "scene": "julia",
+            "us": 432952,
+            "crc32": 1642204412,
+            "iters": 2175959
+          }
+        ],
+        "iters": 26230366
+      },
+      {
+        "ok": true,
+        "mode": "par",
+        "run": 2,
+        "wall_us": 2236150,
+        "images": [
+          {
+            "scene": "mandelbrot",
+            "us": 1340457,
+            "crc32": 1148652194,
+            "iters": 4805711
+          },
+          {
+            "scene": "seahorse-valley",
+            "us": 2236071,
+            "crc32": 3897345883,
+            "iters": 10202087
+          },
+          {
+            "scene": "elephant-valley",
+            "us": 2122540,
+            "crc32": 3039397877,
+            "iters": 9046609
+          },
+          {
+            "scene": "julia",
+            "us": 434337,
+            "crc32": 1642204412,
+            "iters": 2175959
+          }
+        ],
+        "iters": 26230366
+      },
+      {
+        "ok": true,
+        "mode": "par",
+        "run": 3,
+        "wall_us": 2236141,
+        "images": [
+          {
+            "scene": "mandelbrot",
+            "us": 1340443,
+            "crc32": 1148652194,
+            "iters": 4805711
+          },
+          {
+            "scene": "seahorse-valley",
+            "us": 2236061,
+            "crc32": 3897345883,
+            "iters": 10202087
+          },
+          {
+            "scene": "elephant-valley",
+            "us": 2122514,
+            "crc32": 3039397877,
+            "iters": 9046609
+          },
+          {
+            "scene": "julia",
+            "us": 434334,
+            "crc32": 1642204412,
+            "iters": 2175959
+          }
+        ],
+        "iters": 26230366
+      },
+      {
+        "ok": true,
+        "mode": "par",
+        "run": 4,
+        "wall_us": 2236137,
+        "images": [
+          {
+            "scene": "mandelbrot",
+            "us": 1340447,
+            "crc32": 1148652194,
+            "iters": 4805711
+          },
+          {
+            "scene": "seahorse-valley",
+            "us": 2236063,
+            "crc32": 3897345883,
+            "iters": 10202087
+          },
+          {
+            "scene": "elephant-valley",
+            "us": 2122505,
+            "crc32": 3039397877,
+            "iters": 9046609
+          },
+          {
+            "scene": "julia",
+            "us": 434336,
+            "crc32": 1642204412,
+            "iters": 2175959
+          }
+        ],
+        "iters": 26230366
+      },
+      {
+        "ok": true,
+        "mode": "par",
+        "run": 5,
+        "wall_us": 2236138,
+        "images": [
+          {
+            "scene": "mandelbrot",
+            "us": 1340443,
+            "crc32": 1148652194,
+            "iters": 4805711
+          },
+          {
+            "scene": "seahorse-valley",
+            "us": 2236060,
+            "crc32": 3897345883,
+            "iters": 10202087
+          },
+          {
+            "scene": "elephant-valley",
+            "us": 2122504,
+            "crc32": 3039397877,
+            "iters": 9046609
+          },
+          {
+            "scene": "julia",
+            "us": 434335,
+            "crc32": 1642204412,
+            "iters": 2175959
+          }
+        ],
+        "iters": 26230366
+      }
+    ]
+  },
+  "image_crc32": [
+    1148652194,
+    3897345883,
+    3039397877,
+    1642204412
+  ],
+  "pixels_match_timed_runs": true
+}
