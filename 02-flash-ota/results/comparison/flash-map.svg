@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="430" viewBox="0 0 1100 430" font-family="Helvetica, Arial, sans-serif" font-size="13">
+<rect width="1100" height="430" fill="#ffffff"/>
+<text x="150" y="26" font-size="15" font-weight="bold">Flash use with two 1.5 MB OTA slots kept</text>
+<rect x="150.0" y="60" width="14.4" height="28" fill="#98a2b3" stroke="#667085" stroke-width="0.5"><title>Bootloader, table, NVS: 128 KiB</title></rect>
+<rect x="164.4" y="60" width="107.1" height="28" fill="#1f6fb2" stroke="#667085" stroke-width="0.5"><title>Running firmware: 954 KiB</title></rect>
+<rect x="271.5" y="60" width="65.4" height="28" fill="#b2ddff" stroke="#667085" stroke-width="0.5"><title>Firmware slot headroom: 582 KiB</title></rect>
+<rect x="336.9" y="60" width="172.5" height="28" fill="#84caff" stroke="#667085" stroke-width="0.5"><title>Update slot: 1,536 KiB</title></rect>
+<rect x="509.4" y="60" width="45.4" height="28" fill="#f79009" stroke="#667085" stroke-width="0.5"><title>Files stored: 404 KiB</title></rect>
+<rect x="554.7" y="60" width="50.3" height="28" fill="#fedf89" stroke="#667085" stroke-width="0.5"><title>Files free: 448 KiB</title></rect>
+<rect x="605.1" y="60" width="4.9" height="28" fill="#d0d5dd" stroke="#667085" stroke-width="0.5"><title>FAT overhead: 44 KiB</title></rect>
+<text x="10" y="74" font-weight="bold">C3</text>
+<text x="10" y="90" fill="#444">4 MB flash</text>
+<text x="150" y="106" fill="#444">files free 448 KiB · packs: dashboard, icons, latin-font · OTA OK</text>
+<rect x="150.0" y="130" width="14.4" height="28" fill="#98a2b3" stroke="#667085" stroke-width="0.5"><title>Bootloader, table, NVS: 128 KiB</title></rect>
+<rect x="164.4" y="130" width="117.0" height="28" fill="#1f6fb2" stroke="#667085" stroke-width="0.5"><title>Running firmware: 1,042 KiB</title></rect>
+<rect x="281.4" y="130" width="55.5" height="28" fill="#b2ddff" stroke="#667085" stroke-width="0.5"><title>Firmware slot headroom: 494 KiB</title></rect>
+<rect x="336.9" y="130" width="172.5" height="28" fill="#84caff" stroke="#667085" stroke-width="0.5"><title>Update slot: 1,536 KiB</title></rect>
+<rect x="509.4" y="130" width="463.1" height="28" fill="#f79009" stroke="#667085" stroke-width="0.5"><title>Files stored: 4,124 KiB</title></rect>
+<rect x="972.5" y="130" width="88.9" height="28" fill="#fedf89" stroke="#667085" stroke-width="0.5"><title>Files free: 792 KiB</title></rect>
+<rect x="1061.5" y="130" width="8.5" height="28" fill="#d0d5dd" stroke="#667085" stroke-width="0.5"><title>FAT overhead: 76 KiB</title></rect>
+<text x="10" y="144" font-weight="bold">C5</text>
+<text x="10" y="160" fill="#444">8 MB flash</text>
+<text x="150" y="176" fill="#444">files free 792 KiB · packs: dashboard, icons, latin-font, cjk-regular · OTA OK</text>
+<rect x="150.0" y="200" width="14.4" height="28" fill="#98a2b3" stroke="#667085" stroke-width="0.5"><title>Bootloader, table, NVS: 128 KiB</title></rect>
+<rect x="164.4" y="200" width="116.7" height="28" fill="#1f6fb2" stroke="#667085" stroke-width="0.5"><title>Running firmware: 1,039 KiB</title></rect>
+<rect x="281.0" y="200" width="55.8" height="28" fill="#b2ddff" stroke="#667085" stroke-width="0.5"><title>Firmware slot headroom: 497 KiB</title></rect>
+<rect x="336.9" y="200" width="172.5" height="28" fill="#84caff" stroke="#667085" stroke-width="0.5"><title>Update slot: 1,536 KiB</title></rect>
+<rect x="509.4" y="200" width="45.4" height="28" fill="#f79009" stroke="#667085" stroke-width="0.5"><title>Files stored: 404 KiB</title></rect>
+<rect x="554.7" y="200" width="50.3" height="28" fill="#fedf89" stroke="#667085" stroke-width="0.5"><title>Files free: 448 KiB</title></rect>
+<rect x="605.1" y="200" width="4.9" height="28" fill="#d0d5dd" stroke="#667085" stroke-width="0.5"><title>FAT overhead: 44 KiB</title></rect>
+<text x="10" y="214" font-weight="bold">C6</text>
+<text x="10" y="230" fill="#444">4 MB flash</text>
+<text x="150" y="246" fill="#444">files free 448 KiB · packs: dashboard, icons, latin-font · OTA OK</text>
+<rect x="150.0" y="270" width="14.4" height="28" fill="#98a2b3" stroke="#667085" stroke-width="0.5"><title>Bootloader, table, NVS: 128 KiB</title></rect>
+<rect x="164.4" y="270" width="100.3" height="28" fill="#1f6fb2" stroke="#667085" stroke-width="0.5"><title>Running firmware: 893 KiB</title></rect>
+<rect x="264.6" y="270" width="72.2" height="28" fill="#b2ddff" stroke="#667085" stroke-width="0.5"><title>Firmware slot headroom: 643 KiB</title></rect>
+<rect x="336.9" y="270" width="172.5" height="28" fill="#84caff" stroke="#667085" stroke-width="0.5"><title>Update slot: 1,536 KiB</title></rect>
+<rect x="509.4" y="270" width="463.1" height="28" fill="#f79009" stroke="#667085" stroke-width="0.5"><title>Files stored: 4,124 KiB</title></rect>
+<rect x="972.5" y="270" width="88.9" height="28" fill="#fedf89" stroke="#667085" stroke-width="0.5"><title>Files free: 792 KiB</title></rect>
+<rect x="1061.5" y="270" width="8.5" height="28" fill="#d0d5dd" stroke="#667085" stroke-width="0.5"><title>FAT overhead: 76 KiB</title></rect>
+<text x="10" y="284" font-weight="bold">S3</text>
+<text x="10" y="300" fill="#444">8 MB flash</text>
+<text x="150" y="316" fill="#444">files free 792 KiB · packs: dashboard, icons, latin-font, cjk-regular · OTA OK</text>
+<text x="150.0" y="350" text-anchor="middle" fill="#444">0 MB</text>
+<text x="265.0" y="350" text-anchor="middle" fill="#444">1 MB</text>
+<text x="380.0" y="350" text-anchor="middle" fill="#444">2 MB</text>
+<text x="495.0" y="350" text-anchor="middle" fill="#444">3 MB</text>
+<text x="610.0" y="350" text-anchor="middle" fill="#444">4 MB</text>
+<text x="725.0" y="350" text-anchor="middle" fill="#444">5 MB</text>
+<text x="840.0" y="350" text-anchor="middle" fill="#444">6 MB</text>
+<text x="955.0" y="350" text-anchor="middle" fill="#444">7 MB</text>
+<text x="1070.0" y="350" text-anchor="middle" fill="#444">8 MB</text>
+<rect x="150" y="374" width="12" height="12" fill="#98a2b3" stroke="#667085" stroke-width="0.5"/>
+<text x="166" y="385">Bootloader, table, NVS</text>
+<rect x="330.4" y="374" width="12" height="12" fill="#1f6fb2" stroke="#667085" stroke-width="0.5"/>
+<text x="346.4" y="385">Running firmware</text>
+<rect x="467.59999999999997" y="374" width="12" height="12" fill="#b2ddff" stroke="#667085" stroke-width="0.5"/>
+<text x="483.59999999999997" y="385">Firmware slot headroom</text>
+<rect x="648.0" y="374" width="12" height="12" fill="#84caff" stroke="#667085" stroke-width="0.5"/>
+<text x="664.0" y="385">Update slot</text>
+<rect x="749.2" y="374" width="12" height="12" fill="#f79009" stroke="#667085" stroke-width="0.5"/>
+<text x="765.2" y="385">Files stored</text>
+<rect x="857.6" y="374" width="12" height="12" fill="#fedf89" stroke="#667085" stroke-width="0.5"/>
+<text x="873.6" y="385">Files free</text>
+<rect x="951.6" y="374" width="12" height="12" fill="#d0d5dd" stroke="#667085" stroke-width="0.5"/>
+<text x="967.6" y="385">FAT overhead</text>
+</svg>

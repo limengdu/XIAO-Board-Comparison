@@ -1,0 +1,246 @@
+{
+  "label": "S3",
+  "port": "/dev/cu.usbmodem2101",
+  "note": "USB powered, desk",
+  "recorded_at": "2026-11-20T11:27:01",
+  "before": {
+    "target": "esp32s3",
+    "revision": 2,
+    "version": "1.0.0",
+    "idf": "v6.1.1",
+    "flash_bytes": 8388608,
+    "running": "ota_0",
+    "boot": "ota_0",
+    "app_bytes": 914112,
+    "fs_total": 5033984,
+    "fs_free": 5033984,
+    "ip": "192.168.1.49",
+    "rssi": -31,
+    "partitions": [
+      {
+        "label": "nvs",
+        "type": 1,
+        "subtype": 2,
+        "offset": 36864,
+        "size": 24576
+      },
+      {
+        "label": "otadata",
+        "type": 1,
+        "subtype": 0,
+        "offset": 61440,
+        "size": 8192
+      },
+      {
+        "label": "phy_init",
+        "type": 1,
+        "subtype": 1,
+        "offset": 69632,
+        "size": 4096
+      },
+      {
+        "label": "ota_0",
+        "type": 0,
+        "subtype": 16,
+        "offset": 131072,
+        "size": 1572864
+      },
+      {
+        "label": "ota_1",
+        "type": 0,
+        "subtype": 17,
+        "offset": 1703936,
+        "size": 1572864
+      },
+      {
+        "label": "storage",
+        "type": 1,
+        "subtype": 129,
+        "offset": 3276800,
+        "size": 5111808
+      }
+    ]
+  },
+  "installed": {
+    "target": "esp32s3",
+    "revision": 2,
+    "version": "1.0.0",
+    "idf": "v6.1.1",
+    "flash_bytes": 8388608,
+    "running": "ota_0",
+    "boot": "ota_0",
+    "app_bytes": 914112,
+    "fs_total": 5033984,
+    "fs_free": 811008,
+    "ip": "192.168.1.49",
+    "rssi": -30,
+    "partitions": [
+      {
+        "label": "nvs",
+        "type": 1,
+        "subtype": 2,
+        "offset": 36864,
+        "size": 24576
+      },
+      {
+        "label": "otadata",
+        "type": 1,
+        "subtype": 0,
+        "offset": 61440,
+        "size": 8192
+      },
+      {
+        "label": "phy_init",
+        "type": 1,
+        "subtype": 1,
+        "offset": 69632,
+        "size": 4096
+      },
+      {
+        "label": "ota_0",
+        "type": 0,
+        "subtype": 16,
+        "offset": 131072,
+        "size": 1572864
+      },
+      {
+        "label": "ota_1",
+        "type": 0,
+        "subtype": 17,
+        "offset": 1703936,
+        "size": 1572864
+      },
+      {
+        "label": "storage",
+        "type": 1,
+        "subtype": 129,
+        "offset": 3276800,
+        "size": 5111808
+      }
+    ]
+  },
+  "after": {
+    "target": "esp32s3",
+    "revision": 2,
+    "version": "2.0.0",
+    "idf": "v6.1.1",
+    "flash_bytes": 8388608,
+    "running": "ota_1",
+    "boot": "ota_1",
+    "app_bytes": 914112,
+    "fs_total": 5033984,
+    "fs_free": 811008,
+    "ip": "192.168.1.49",
+    "rssi": -30,
+    "partitions": [
+      {
+        "label": "nvs",
+        "type": 1,
+        "subtype": 2,
+        "offset": 36864,
+        "size": 24576
+      },
+      {
+        "label": "otadata",
+        "type": 1,
+        "subtype": 0,
+        "offset": 61440,
+        "size": 8192
+      },
+      {
+        "label": "phy_init",
+        "type": 1,
+        "subtype": 1,
+        "offset": 69632,
+        "size": 4096
+      },
+      {
+        "label": "ota_0",
+        "type": 0,
+        "subtype": 16,
+        "offset": 131072,
+        "size": 1572864
+      },
+      {
+        "label": "ota_1",
+        "type": 0,
+        "subtype": 17,
+        "offset": 1703936,
+        "size": 1572864
+      },
+      {
+        "label": "storage",
+        "type": 1,
+        "subtype": 129,
+        "offset": 3276800,
+        "size": 5111808
+      }
+    ]
+  },
+  "packs": [
+    {
+      "id": "dashboard",
+      "title": "Web dashboard + Chart.js",
+      "files": 6,
+      "raw_bytes": 212461,
+      "stored_bytes": 72914,
+      "status": "installed",
+      "seconds": 2.5,
+      "fs_free_after": 4931584
+    },
+    {
+      "id": "icons",
+      "title": "Font Awesome Free icons",
+      "files": 4,
+      "raw_bytes": 292016,
+      "stored_bytes": 206715,
+      "status": "installed",
+      "seconds": 3.7,
+      "fs_free_after": 4702208
+    },
+    {
+      "id": "latin-font",
+      "title": "Inter UI font, regular + bold",
+      "files": 5,
+      "raw_bytes": 49351,
+      "stored_bytes": 46740,
+      "status": "installed",
+      "seconds": 2.4,
+      "fs_free_after": 4628480
+    },
+    {
+      "id": "cjk-regular",
+      "title": "Noto Sans SC Chinese font, regular",
+      "files": 104,
+      "raw_bytes": 3646399,
+      "stored_bytes": 3570201,
+      "status": "installed",
+      "seconds": 71.2,
+      "fs_free_after": 811008
+    },
+    {
+      "id": "cjk-bold",
+      "title": "Noto Sans SC Chinese font, bold",
+      "files": 103,
+      "raw_bytes": 3723398,
+      "stored_bytes": 3649635,
+      "status": "does_not_fit",
+      "files_before_full": 24,
+      "seconds": 21.1,
+      "fs_free_after": 811008
+    }
+  ],
+  "ota": {
+    "image_bytes": 914112,
+    "seconds": 15.5,
+    "from": "1.0.0 on ota_0",
+    "to": "2.0.0 on ota_1",
+    "ok": true
+  },
+  "verify": {
+    "files_checked": 119,
+    "files_bad": [],
+    "dashboard_status": 200,
+    "ok": true
+  }
+}

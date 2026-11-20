@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XIAO Flash Dashboard</title>
+  <link rel="stylesheet" href="fonts/inter/latin-400.css">
+  <link rel="stylesheet" href="fonts/inter/latin-700.css">
+  <link rel="stylesheet" href="fonts/noto-sans-sc/400.css">
+  <link rel="stylesheet" href="fonts/noto-sans-sc/700.css">
+  <link rel="stylesheet" href="fa/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1><i class="fa-solid fa-microchip"></i> <span id="board">XIAO</span></h1>
+    <p id="version" class="muted"></p>
+  </header>
+
+  <section class="card">
+    <h2><i class="fa-solid fa-hard-drive"></i> Flash layout</h2>
+    <canvas id="flash" height="120"></canvas>
+    <table id="parts"></table>
+  </section>
+
+  <section class="card">
+    <h2><i class="fa-solid fa-box-open"></i> Installed resources</h2>
+    <ul id="resources"></ul>
+  </section>
+
+  <section class="card">
+    <h2><i class="fa-solid fa-language"></i> Chinese UI font</h2>
+    <p id="sample" class="sample"></p>
+    <p id="sample-bold" class="sample bold"></p>
+  </section>
+
+  <script src="vendor/chart.umd.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

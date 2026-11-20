@@ -1,0 +1,47 @@
+:root {
+  --bg: #f5f6f8;
+  --card: #ffffff;
+  --text: #1d2330;
+  --muted: #667085;
+  --line: #e4e7ec;
+  --ok: #1a7f37;
+  --missing: #b42318;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 16px;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", "Noto Sans SC", system-ui, sans-serif;
+  max-width: 880px;
+  margin-inline: auto;
+}
+
+h1 { font-size: 1.5rem; margin: 0 0 4px; }
+h2 { font-size: 1.05rem; margin: 0 0 12px; }
+h1 i, h2 i { color: #1f6fb2; width: 1.3em; }
+.muted { color: var(--muted); margin: 0 0 16px; }
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 0.9rem; }
+td, th { padding: 6px 8px; border-bottom: 1px solid var(--line); text-align: left; }
+td.num { text-align: right; font-variant-numeric: tabular-nums; }
+
+ul { list-style: none; padding: 0; margin: 0; }
+li { padding: 6px 0; border-bottom: 1px solid var(--line); }
+li:last-child { border-bottom: none; }
+.ok { color: var(--ok); }
+.missing { color: var(--missing); }
+
+.sample { font-family: "Noto Sans SC", sans-serif; font-size: 1.1rem; line-height: 1.7; margin: 0 0 8px; }
+.sample.bold { font-weight: 700; }

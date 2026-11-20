@@ -1,0 +1,55 @@
+{
+  "description": "Resource packs uploaded in order. Each pack is installed completely or not at all.",
+  "packs": [
+    {
+      "id": "dashboard",
+      "title": "Web dashboard + Chart.js",
+      "files": [
+        { "local": "www/index.html", "dest": "www/index.html", "gzip": true },
+        { "local": "www/app.js", "dest": "www/app.js", "gzip": true },
+        { "local": "www/style.css", "dest": "www/style.css", "gzip": true },
+        { "local": "www/sample-zh.txt", "dest": "www/sample-zh.txt", "gzip": true },
+        { "npm": "chart.js@4.4.1", "path": "dist/chart.umd.js", "dest": "www/vendor/chart.umd.js", "gzip": true },
+        { "npm": "chart.js@4.4.1", "path": "LICENSE.md", "dest": "www/licenses/chart.js.md", "gzip": true }
+      ]
+    },
+    {
+      "id": "icons",
+      "title": "Font Awesome Free icons",
+      "files": [
+        { "npm": "@fortawesome/fontawesome-free@6.5.1", "path": "css/all.min.css", "dest": "www/fa/css/all.min.css", "gzip": true },
+        { "npm": "@fortawesome/fontawesome-free@6.5.1", "path": "webfonts/fa-solid-900.woff2", "dest": "www/fa/webfonts/fa-solid-900.woff2" },
+        { "npm": "@fortawesome/fontawesome-free@6.5.1", "path": "webfonts/fa-regular-400.woff2", "dest": "www/fa/webfonts/fa-regular-400.woff2" },
+        { "npm": "@fortawesome/fontawesome-free@6.5.1", "path": "LICENSE.txt", "dest": "www/licenses/fontawesome.txt", "gzip": true }
+      ]
+    },
+    {
+      "id": "latin-font",
+      "title": "Inter UI font, regular + bold",
+      "files": [
+        { "npm": "@fontsource/inter@5.0.16", "path": "latin-400.css", "dest": "www/fonts/inter/latin-400.css", "gzip": true },
+        { "npm": "@fontsource/inter@5.0.16", "path": "latin-700.css", "dest": "www/fonts/inter/latin-700.css", "gzip": true },
+        { "npm": "@fontsource/inter@5.0.16", "glob": "files/inter-latin-400-normal.woff2", "dest_dir": "www/fonts/inter" },
+        { "npm": "@fontsource/inter@5.0.16", "glob": "files/inter-latin-700-normal.woff2", "dest_dir": "www/fonts/inter" },
+        { "npm": "@fontsource/inter@5.0.16", "path": "LICENSE", "dest": "www/licenses/inter.txt", "gzip": true }
+      ]
+    },
+    {
+      "id": "cjk-regular",
+      "title": "Noto Sans SC Chinese font, regular",
+      "files": [
+        { "npm": "@fontsource/noto-sans-sc@5.0.19", "path": "400.css", "dest": "www/fonts/noto-sans-sc/400.css", "gzip": true },
+        { "npm": "@fontsource/noto-sans-sc@5.0.19", "glob": "files/noto-sans-sc-*-400-normal.woff2", "dest_dir": "www/fonts/noto-sans-sc" },
+        { "npm": "@fontsource/noto-sans-sc@5.0.19", "path": "LICENSE", "dest": "www/licenses/noto-sans-sc.txt", "gzip": true }
+      ]
+    },
+    {
+      "id": "cjk-bold",
+      "title": "Noto Sans SC Chinese font, bold",
+      "files": [
+        { "npm": "@fontsource/noto-sans-sc@5.0.19", "path": "700.css", "dest": "www/fonts/noto-sans-sc/700.css", "gzip": true },
+        { "npm": "@fontsource/noto-sans-sc@5.0.19", "glob": "files/noto-sans-sc-*-700-normal.woff2", "dest_dir": "www/fonts/noto-sans-sc" }
+      ]
+    }
+  ]
+}

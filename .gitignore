@@ -12,3 +12,6 @@ __pycache__/
 .vscode/
 .idea/
 .DS_Store
+
+# Downloaded third-party assets (fetched by tools/fetch_assets.py)
+**/assets/cache/
