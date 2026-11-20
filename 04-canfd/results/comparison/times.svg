@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="274" viewBox="0 0 1000 274" font-family="Helvetica, Arial, sans-serif" font-size="13">
+<rect width="1000" height="274" fill="#ffffff"/>
+<text x="10" y="26" font-size="15" font-weight="bold">Time to move the same 64 KiB over a real CAN bus (median, lower is faster)</text>
+<text x="10" y="74"><tspan font-weight="bold">C5</tspan> Classic, 8 B/frame, 500 kbps</text>
+<rect x="330" y="60" width="550.0" height="20" fill="#98a2b3"/>
+<line x1="880.0" y1="70.0" x2="880.0" y2="70.0" stroke="#101828"/>
+<text x="886.0" y="75">2.260 s</text>
+<text x="10" y="100"><tspan font-weight="bold">C5</tspan> FD, 64 B/frame, 500 kbps</text>
+<rect x="330" y="86" width="309.5" height="20" fill="#53b1fd"/>
+<line x1="639.5" y1="96.0" x2="639.5" y2="96.0" stroke="#101828"/>
+<text x="645.5" y="101">1.272 s</text>
+<text x="10" y="126"><tspan font-weight="bold">C5</tspan> FD + BRS, 64 B/frame, 500 k / 2 Mbps</text>
+<rect x="330" y="112" width="97.4" height="20" fill="#1f6fb2"/>
+<line x1="427.4" y1="122.0" x2="427.4" y2="122.0" stroke="#101828"/>
+<text x="433.4" y="127">0.400 s</text>
+<text x="10" y="166"><tspan font-weight="bold">C5-5M</tspan> Classic, 8 B/frame, 500 kbps</text>
+<rect x="330" y="152" width="550.0" height="20" fill="#98a2b3"/>
+<line x1="880.0" y1="162.0" x2="880.0" y2="162.0" stroke="#101828"/>
+<text x="886.0" y="167">2.260 s</text>
+<text x="10" y="192"><tspan font-weight="bold">C5-5M</tspan> FD, 64 B/frame, 500 kbps</text>
+<rect x="330" y="178" width="309.5" height="20" fill="#53b1fd"/>
+<line x1="639.5" y1="188.0" x2="639.5" y2="188.0" stroke="#101828"/>
+<text x="645.5" y="193">1.272 s</text>
+<text x="10" y="218"><tspan font-weight="bold">C5-5M</tspan> FD + BRS, 64 B/frame, 500 k / 5 Mbps</text>
+<rect x="330" y="204" width="55.0" height="20" fill="#1f6fb2"/>
+<line x1="385.0" y1="214.0" x2="385.0" y2="214.0" stroke="#101828"/>
+<text x="391.0" y="219">0.226 s</text>
+</svg>
