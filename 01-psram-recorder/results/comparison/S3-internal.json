@@ -1,0 +1,48 @@
+{
+  "label": "S3-internal",
+  "port": "/dev/cu.usbmodem2101",
+  "mem": "internal",
+  "seconds": 60,
+  "note": "USB powered, desk; PSRAM unused",
+  "recorded_at": "2026-11-20T10:50:47",
+  "info": {
+    "target": "esp32s3",
+    "revision": 2,
+    "cores": 2,
+    "cpu_mhz": 240,
+    "mac": "30:30:f9:33:f9:a8",
+    "idf": "v6.1.1",
+    "psram_total": 8388608,
+    "psram_free": 8385656,
+    "internal_free": 375071,
+    "internal_largest": 286720
+  },
+  "start": {
+    "seconds": 60,
+    "memory": "internal",
+    "buffer_bytes": 286656,
+    "wanted_bytes": 720000,
+    "capacity_s": 23.888
+  },
+  "result": {
+    "ok": true,
+    "memory": "internal",
+    "buffer_bytes": 286656,
+    "wanted_bytes": 720000,
+    "samples_written": 120000,
+    "samples_retained": 47776,
+    "first_sample": 72224,
+    "retained_s": 23.888,
+    "elapsed_ms": 60000,
+    "internal_free_after": 92499
+  },
+  "dump": {
+    "sample_rate": 2000,
+    "sample_bytes": 6,
+    "format": "int16le_xyz",
+    "first_sample": 72224,
+    "samples": 47776,
+    "seconds": 60
+  },
+  "dump_seconds": 5.31
+}

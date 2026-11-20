@@ -1,0 +1,48 @@
+{
+  "label": "S3",
+  "port": "/dev/cu.usbmodem2101",
+  "mem": "auto",
+  "seconds": 60,
+  "note": "USB powered, desk",
+  "recorded_at": "2026-11-20T10:49:40",
+  "info": {
+    "target": "esp32s3",
+    "revision": 2,
+    "cores": 2,
+    "cpu_mhz": 240,
+    "mac": "30:30:f9:33:f9:a8",
+    "idf": "v6.1.1",
+    "psram_total": 8388608,
+    "psram_free": 8385656,
+    "internal_free": 375071,
+    "internal_largest": 286720
+  },
+  "start": {
+    "seconds": 60,
+    "memory": "psram",
+    "buffer_bytes": 720000,
+    "wanted_bytes": 720000,
+    "capacity_s": 60.0
+  },
+  "result": {
+    "ok": true,
+    "memory": "psram",
+    "buffer_bytes": 720000,
+    "wanted_bytes": 720000,
+    "samples_written": 120000,
+    "samples_retained": 120000,
+    "first_sample": 0,
+    "retained_s": 60.0,
+    "elapsed_ms": 60000,
+    "internal_free_after": 379227
+  },
+  "dump": {
+    "sample_rate": 2000,
+    "sample_bytes": 6,
+    "format": "int16le_xyz",
+    "first_sample": 0,
+    "samples": 120000,
+    "seconds": 60
+  },
+  "dump_seconds": 13.13
+}

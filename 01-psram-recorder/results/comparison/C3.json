@@ -1,0 +1,48 @@
+{
+  "label": "C3",
+  "port": "/dev/cu.usbmodem1301",
+  "mem": "auto",
+  "seconds": 60,
+  "note": "USB powered, desk",
+  "recorded_at": "2026-11-20T10:49:29",
+  "info": {
+    "target": "esp32c3",
+    "revision": 4,
+    "cores": 1,
+    "cpu_mhz": 160,
+    "mac": "a0:85:e3:0d:d6:e0",
+    "idf": "v6.1.1",
+    "psram_total": 0,
+    "psram_free": 0,
+    "internal_free": 319012,
+    "internal_largest": 180224
+  },
+  "start": {
+    "seconds": 60,
+    "memory": "internal",
+    "buffer_bytes": 180156,
+    "wanted_bytes": 720000,
+    "capacity_s": 15.013
+  },
+  "result": {
+    "ok": true,
+    "memory": "internal",
+    "buffer_bytes": 180156,
+    "wanted_bytes": 720000,
+    "samples_written": 120000,
+    "samples_retained": 30026,
+    "first_sample": 89974,
+    "retained_s": 15.013,
+    "elapsed_ms": 60000,
+    "internal_free_after": 142936
+  },
+  "dump": {
+    "sample_rate": 2000,
+    "sample_bytes": 6,
+    "format": "int16le_xyz",
+    "first_sample": 89974,
+    "samples": 30026,
+    "seconds": 60
+  },
+  "dump_seconds": 2.31
+}

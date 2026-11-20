@@ -1,0 +1,48 @@
+{
+  "label": "C6",
+  "port": "/dev/cu.usbmodem1101",
+  "mem": "auto",
+  "seconds": 60,
+  "note": "USB powered, desk",
+  "recorded_at": "2026-11-20T10:49:33",
+  "info": {
+    "target": "esp32c6",
+    "revision": 1,
+    "cores": 1,
+    "cpu_mhz": 160,
+    "mac": "54:32:04:33:37:c0",
+    "idf": "v6.1.1",
+    "psram_total": 0,
+    "psram_free": 0,
+    "internal_free": 461940,
+    "internal_largest": 434176
+  },
+  "start": {
+    "seconds": 60,
+    "memory": "internal",
+    "buffer_bytes": 433320,
+    "wanted_bytes": 720000,
+    "capacity_s": 36.11
+  },
+  "result": {
+    "ok": true,
+    "memory": "internal",
+    "buffer_bytes": 433320,
+    "wanted_bytes": 720000,
+    "samples_written": 120000,
+    "samples_retained": 72220,
+    "first_sample": 47780,
+    "retained_s": 36.11,
+    "elapsed_ms": 60000,
+    "internal_free_after": 32768
+  },
+  "dump": {
+    "sample_rate": 2000,
+    "sample_bytes": 6,
+    "format": "int16le_xyz",
+    "first_sample": 47780,
+    "samples": 72220,
+    "seconds": 60
+  },
+  "dump_seconds": 7.01
+}
