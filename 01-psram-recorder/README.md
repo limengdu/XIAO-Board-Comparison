@@ -1,35 +1,35 @@
-# A1-01：8 MB PSRAM，能回看事故前数据的记录器
+# 01: 8 MB PSRAM — 60-Second Ring-Buffer Fault Recorder
 
-四块 XIAO（C3、C5、C6、S3）运行同一份固件，实时记录同一组**模拟**三轴振动数据，第 10 秒插入一段明显的异常尖峰。记录满 60 秒后，电脑再把每块板缓冲区里的数据取回来并排画图，看谁还能找回第 10 秒的异常。
+Four XIAO boards (C3, C5, C6, S3) run identical firmware to record the exact same deterministic simulated 3-axis vibration stream in real time, with a sharp fault spike injected at the 10-second mark. After 60 seconds of continuous recording, the host computer dumps whatever history survived in each board's ring buffer to check whether the 10-second fault is still intact.
 
-## 1. 实验设计
+Full write-up: **[Is the $6.90 XIAO ESP32-C5 Worth It Over C3, C6, and S3?](https://www.hackster.io/limengdu0117/is-the-6-90-xiao-esp32-c5-worth-it-over-c3-c6-and-s3-3cb24e)** · Pre-recorded results: [`results/summary.md`](results/summary.md)
 
-| 项目 | 设定 |
+## 1. Experiment Design
+
+| Item | Configuration |
 | --- | --- |
-| 数据 | 每秒 2000 组，每组 X/Y/Z 三个 int16，共 6 字节；X 为 50 Hz 振动，Y 为 120 Hz 振动，Z 为 1 g，均叠加少量噪声 |
-| 异常 | 第 10.000 秒开始，持续 10 ms 的大幅值尖峰 |
-| 完整历史 | 60 秒 × 2000 组 × 6 字节 = 720,000 字节 |
-| 缓冲区 | 环形缓冲区，按完整 60 秒申请；内存放不下时按可用空间申请，写满后覆盖最早的数据 |
-| 内存选择 | 有 PSRAM 的板（C5、S3）放 PSRAM；C3、C6 放内部 RAM，并给系统保留 32 KiB 空闲 |
-| 导出 | 记录结束后才导出，电脑在记录期间只接收进度，不代存数据；导出数据带 CRC32 校验 |
+| Stream | 2,000 samples/s, three little-endian `int16` axes (6 bytes/sample): X = 50 Hz, Y = 120 Hz, Z = 1 g + deterministic pseudo-random noise |
+| Fault Spike | 10 ms high-amplitude spike starting at exactly `10.000 s` |
+| Full History | `60 s × 2,000 samples/s × 6 B = 720,000 bytes` |
+| Buffer Policy | Circular ring buffer requesting the full 60 s; falls back to the largest available block and wraps around over the oldest samples when full |
+| Memory Selection | Uses external PSRAM when available (`C5`, `S3`); falls back to internal SRAM on `C3` and `C6` while reserving 32 KiB for the system |
+| Dump & Verify | Host receives only progress ticks during recording (zero host buffering); full dump after 60 s is verified by `CRC32` |
 
-板上只按样本序号生成数据，生成节奏与实时时钟对齐，四块板得到的数据内容一致，差别只来自能保留多长的历史。
+## 2. Requirements
 
-## 2. 准备
-
-| 项目 | 要求 |
+| Item | Requirement |
 | --- | --- |
-| 硬件 | XIAO ESP32-C3、ESP32-C5、ESP32-C6、ESP32-S3（8 MB PSRAM 版本，例如 Sense 或 Plus），每块一根 USB-C 数据线 |
-| 软件 | ESP-IDF **v6.1.1**（ESP32-C5 v1.0 芯片需要 v5.5.2 及以上） |
-| 电脑端 | 使用 ESP-IDF 环境自带的 Python 与 pyserial，图表为脚本直接生成的 SVG |
+| Hardware | XIAO ESP32-C3, XIAO ESP32-C5, XIAO ESP32-C6, XIAO ESP32-S3 (8 MB PSRAM variant such as Sense or Plus), USB-C data cable |
+| Firmware SDK | ESP-IDF **v6.1.1** (ESP32-C5 v1.0 silicon requires v5.5.2+) |
+| Host | Python + `pyserial` bundled in the ESP-IDF Python environment |
 
-## 3. 编译与烧录
+## 3. Build & Flash
 
-每个芯片使用独立的构建目录和 sdkconfig，同一份源码可以同时保留四个目标的构建结果。构建目录放在纯英文路径下，因为工具链读取 specs 文件时需要 ASCII 路径。
+Keep separate ASCII build directories per target so all four builds can coexist:
 
 ```sh
 get_idf
-idf.py --version            # 应显示 ESP-IDF v6.1.1
+idf.py --version            # Expect ESP-IDF v6.1.1
 
 for t in esp32c3 esp32c5 esp32c6 esp32s3; do
   B="$HOME/.cache/a1-psram/$t"
@@ -37,67 +37,50 @@ for t in esp32c3 esp32c5 esp32c6 esp32s3; do
 done
 ```
 
-用 `ls /dev/cu.usbmodem*` 找到各板串口，再烧录对应目标（**会替换该板现有固件**）：
+Find the serial port (`ls /dev/cu.usbmodem*`) and flash the corresponding target (**replaces existing firmware on the board**):
 
 ```sh
 B="$HOME/.cache/a1-psram/esp32c5"
 idf.py -B "$B/build" -DSDKCONFIG="$B/sdkconfig" -p /dev/cu.usbmodemXXXX flash
 ```
 
-各目标的 Flash 大小、CPU 频率和 PSRAM 设置在 `sdkconfig.defaults.<芯片>` 中：C3/C6 为 4 MB Flash、160 MHz；C5/S3 为 8 MB Flash、240 MHz 并启用 PSRAM（S3 为 Octal 模式）。
+Target-specific flash size, CPU clock, and PSRAM settings live in `sdkconfig.defaults.<target>`: 4 MB Flash / 160 MHz for C3 & C6; 8 MB Flash / 240 MHz with PSRAM enabled for C5 & S3 (Octal mode on S3).
 
-## 4. 运行
+## 4. Run
 
-每次测一块板，结果以板名记入同一个对比目录 `results/comparison/`，表格和图会自动包含已测过的所有板。只插一块板时可省略 `--port`：
-
-```sh
-python tools/run_psram.py --board C3 --note "USB powered, desk"
-```
-
-同时插多块板时，为每块板指定串口，可以在多个终端里并行运行：
+Each run records one board and updates the comparison table and waveform plot (`--out results` updates the archived folder directly; default `--out` is `results/comparison`):
 
 ```sh
-python tools/run_psram.py --board C5 --port /dev/cu.usbmodem1201 --note "USB powered, desk"
-python tools/run_psram.py --board C5-internal --port /dev/cu.usbmodem1201 --mem internal
+python tools/run_psram.py --board C3 --out results --note "USB powered, desk"
+python tools/run_psram.py --board C5 --port /dev/cu.usbmodem1201 --out results --note "USB powered, desk"
+python tools/run_psram.py --board C5-internal --port /dev/cu.usbmodem1201 --out results --mem internal
 ```
 
-每块板约 70 秒（60 秒记录 + 导出）。用同一个板名再测一次会替换该板的旧结果。
-
-| 参数 | 作用 | 默认值 |
+| Flag | Description | Default |
 | --- | --- | --- |
-| `--board 名称` | 该板在对比中的名称，例如 `C3`、`C5`、`C5-internal` | 必填 |
-| `--port` | 串口 | 唯一的 `/dev/cu.usbmodem*` |
-| `--mem auto\|internal` | `internal` 让有 PSRAM 的板只用内部 RAM，作为同一芯片的对照 | `auto` |
-| `--seconds` | 记录时长，同一对比目录内所有板需一致 | `60` |
-| `--note` | 该板测试条件的文字记录 | 空 |
-| `--out` | 对比目录 | `results/comparison` |
-| `--replot` | 只用已保存的数据重新生成表格和图 | — |
+| `--board NAME` | Board label in the comparison table (e.g., `C3`, `C5`, `C5-internal`) | Required |
+| `--port` | Serial port | Auto-detect single `/dev/cu.usbmodem*` |
+| `--mem auto\|internal` | `internal` forces PSRAM boards to use internal SRAM only as a control run | `auto` |
+| `--seconds` | Recording duration in seconds (keep identical across boards) | `60` |
+| `--note` | Test condition note | Empty |
+| `--out` | Output directory | `results/comparison` |
+| `--replot` | Regenerate summary table and SVG plot from saved data only | — |
 
-## 5. 结果文件
+## 5. Output Files
 
-保存在对比目录 `results/comparison/`：
+Archived in [`results/`](results/):
 
-| 文件 | 内容 |
+| File | Description |
 | --- | --- |
-| `summary.md` | 每块板的缓冲区大小、保留时长与时间范围、异常是否仍在、导出耗时 |
-| `waveforms.svg` | 所有板 X 轴历史并排在同一条 0–60 秒时间轴上，灰色区域为已被覆盖的部分 |
-| `<名称>.bin` | 板上导出的原始样本，小端 int16 X/Y/Z 依次排列，按时间从早到晚 |
-| `<名称>.json` | 板卡信息、内存使用、板端统计、测试条件 `note` 与记录时间 `recorded_at` |
+| `summary.md` | Buffer size, retained duration/window, whether the 10 s fault survived, and dump time |
+| `waveforms.svg` | Side-by-side X-axis 0–60 s history across all boards (overwritten segments shaded gray) |
+| `<NAME>.bin` | Raw dumped samples (little-endian `int16` X/Y/Z in chronological order) |
+| `<NAME>.json` | Chip info, heap usage, board stats, `note`, and `recorded_at` timestamp |
 
-异常是否保留由电脑端直接检查导出数据得出（|X| ≥ 15000 视为尖峰）。
+## 6. Interactive Serial Commands
 
-## 6. 串口命令
-
-也可以用任意串口终端直接操作：
-
-| 命令 | 作用 |
+| Command | Description |
 | --- | --- |
-| `info` | 输出芯片型号、版本、CPU 频率、PSRAM 与内部 RAM 空闲量 |
-| `record seconds=60 mem=auto` | 实时记录；`mem=internal` 只用内部 RAM |
-| `dump` | 以 `DUMP_BEGIN` / `D <base64>` / `DUMP_END` 行输出保留的样本 |
-
-## 7. 结论口径
-
-- 本实验比较的是**运行时缓存容量**：同一记录任务下，每块板能保留多长的原始历史。
-- XIAO ESP32-S3 同样有 8 MB PSRAM，结果应与 C5 同属"完整保留"一组；对比重点是 C3、C6。
-- 数据为模拟数据，结论不涉及 CPU 速度或传感器精度。
+| `info` | Print chip model, revision, CPU clock, and free PSRAM / internal SRAM |
+| `record seconds=60 mem=auto` | Run timed capture (`mem=internal` restricts to internal SRAM) |
+| `dump` | Stream retained samples framed by `DUMP_BEGIN` / `D <base64>` / `DUMP_END` with CRC32 |

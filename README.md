@@ -1,19 +1,28 @@
-# A1：XIAO ESP32-C3 / C5 / C6 / S3 对比测评
+# XIAO ESP32-C3 / C5 / C6 / S3 Real-World Benchmark Suite
 
-对比文章《已有 C3、C6 或 S3，还需要 XIAO ESP32-C5 吗？》的实验工程。每个部分是一个独立工程，四块板运行同一份源码，用同一个实际任务比较结果。
+Companion firmware, host automation scripts, and measured benchmark data for the Hackster.io comparison article:
 
-| 部分 | 目录 | 用户任务 | 状态 |
+**[Is the $6.90 XIAO ESP32-C5 Worth It Over C3, C6, and S3?](https://www.hackster.io/limengdu0117/is-the-6-90-xiao-esp32-c5-worth-it-over-c3-c6-and-s3-3cb24e)**
+
+Each subdirectory is a standalone ESP-IDF project. All four Seeed Studio XIAO boards (`XIAO ESP32-C3`, `XIAO ESP32-C5`, `XIAO ESP32-C6`, and `XIAO ESP32-S3`) run the exact same C application source on each real-world task so measured differences reflect actual silicon and board capabilities rather than code differences.
+
+| Test | Directory | Real-World Task | Measured Results |
 | --- | --- | --- | --- |
-| 1. 8 MB PSRAM | [01-psram-recorder](01-psram-recorder/README.md) | 记录器能否回看事故发生前的数据 | 四板实测完成，[对比结果](01-psram-recorder/results/summary.md) |
-| 2. 8 MB Flash | [02-flash-ota](02-flash-ota/README.md) | 保留 OTA 升级能力后还能放多少内容 | 四板实测完成，[对比结果](02-flash-ota/results/summary.md) |
-| 3. 240 MHz CPU | [03-cpu-render](03-cpu-render/README.md) | 渲染同一组四张图所需的时间 | 四板实测完成，[对比结果](03-cpu-render/results/summary.md) |
-| 4. CAN FD | [04-canfd](04-canfd/README.md) | 经典 CAN 与 CAN FD 传输同一数据块 | C5 双节点真实总线实测完成，[对比结果](04-canfd/results/summary.md) |
-| 5. Wi-Fi 6 省电 | [05-wifi6-itwt](05-wifi6-itwt/README.md) | 开启 iTWT 后相同联网任务的耗电与响应 | 四板 PPK2 实测完成（C5 测 2.4G 与 5G），[对比结果](05-wifi6-itwt/results/summary.md) |
+| 1. 8 MB PSRAM | [01-psram-recorder](01-psram-recorder/README.md) | 60-second 2 kHz ring-buffer fault recorder | [Summary & Plots](01-psram-recorder/results/summary.md) |
+| 2. 8 MB Flash + Dual OTA | [02-flash-ota](02-flash-ota/README.md) | Web UI & CJK font capacity alongside Dual-OTA slots | [Summary & Plots](02-flash-ota/results/summary.md) |
+| 3. 240 MHz CPU | [03-cpu-render](03-cpu-render/README.md) | Fixed-point fractal rendering (single-task vs. 4-task) | [Summary & Plots](03-cpu-render/results/summary.md) |
+| 4. Native CAN FD | [04-canfd](04-canfd/README.md) | Classic CAN vs. CAN FD 64 KiB physical bus transfer | [Summary & Plots](04-canfd/results/summary.md) |
+| 5. Wi-Fi 6 Power (iTWT) | [05-wifi6-itwt](05-wifi6-itwt/README.md) | Connected current & latency across 2.4 GHz / 5 GHz & TWT | [Summary & Plots](05-wifi6-itwt/results/summary.md) |
 
-## 通用约定
+## General Conventions
 
-- ESP-IDF **v6.1.1**，四个目标均在同一版本下编译。
-- 需要联网的实验从本目录的 `.env` 读取 `WIFI_SSID` 与 `WIFI_PASSWORD`，格式见 `.env.example`。
-- 每个工程用 `idf.py -B "$HOME/.cache/<工程>/<芯片>/build" -DIDF_TARGET=<芯片> -DSDKCONFIG=...` 为每个芯片单独构建，构建目录放在纯英文路径下。
-- 测试对象是具体的 XIAO 板卡，结果包含板级供电、天线和 PCB 等因素。
-- 每次测一块板，原始数据、板卡信息和测试条件按板名存入工程的 `results/comparison/`，对比表和图随之更新。
+- **Toolchain:** Built with **ESP-IDF v6.1.1** across all four targets (`esp32c3`, `esp32c5`, `esp32c6`, `esp32s3`).
+- **Wi-Fi Credentials:** Networked benchmarks read `WIFI_SSID`, `WIFI_PASSWORD`, and `WIFI_SSID_5G` from `.env` in this root directory (copy `.env.example` to `.env`).
+- **Out-of-Tree Builds:** Build each chip in its own ASCII path via `idf.py -B "$HOME/.cache/<project>/<target>/build" -DIDF_TARGET=<target> -DSDKCONFIG=...` so all four target builds can coexist cleanly.
+- **Board-Level Measurements:** All measurements are taken on retail Seeed Studio XIAO boards and include board-level LDO, antenna, and PCB characteristics.
+- **Recorded Data & Figures:** Pre-recorded raw logs, JSON summaries, SVGs, and conclusion graphics are archived under each project's `results/` directory.
+
+## Articles
+
+- **Hackster.io (Published):** [Is the $6.90 XIAO ESP32-C5 Worth It Over C3, C6, and S3?](https://www.hackster.io/limengdu0117/is-the-6-90-xiao-esp32-c5-worth-it-over-c3-c6-and-s3-3cb24e)
+- **Local Manuscripts:** [English Markdown](XIAO-ESP32-C5-In-Depth-Comparison.md) · [Chinese Markdown](XIAO-ESP32-C5-深度对比评测.md)
